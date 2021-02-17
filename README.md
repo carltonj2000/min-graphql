@@ -1,4 +1,4 @@
-# GraphQL Tutorial
+# Minimum GraphQL Tutorial
 
 Mock data from https://www.mockaroo.com/
 

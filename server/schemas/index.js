@@ -31,18 +31,16 @@ const Mutation = new GraphQLObjectType({
         first_name: { type: GraphQLString },
         last_name: { type: GraphQLString },
         email: { type: GraphQLString },
-        gender: { type: GraphQLString },
-        ip_address: { type: GraphQLString },
+        password: { type: GraphQLString },
       },
       resolve(parent, args) {
-        const { first_name, last_name, email, gender, ip_address } = args;
+        const { first_name, last_name, email, password } = args;
         const user = {
           id: userData[userData.length - 1].id + 1,
           first_name,
           last_name,
           email,
-          gender,
-          ip_address,
+          password,
         };
         userData.push(user);
         return user;
