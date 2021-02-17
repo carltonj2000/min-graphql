@@ -7,7 +7,7 @@ function Form() {
   const [last_name, last_nameSet] = useState("");
   const [email, emailSet] = useState("");
   const [password, passwordSet] = useState("");
-  const [createUser] = useMutation(CREATE_USER);
+  const [createUser, { data, error }] = useMutation(CREATE_USER);
 
   const addUser = async () => {
     await createUser({ variables: { first_name, last_name, email, password } });
@@ -15,6 +15,7 @@ function Form() {
     last_nameSet("");
     emailSet("");
     passwordSet("");
+    console.log("e n d", error, data);
   };
 
   return (

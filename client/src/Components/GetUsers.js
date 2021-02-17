@@ -15,7 +15,9 @@ function GetUsers() {
   return (
     <div>
       {users.map((user) => (
-        <p key={user.id}>{user.last_name}</p>
+        <p key={user.id}>
+          {user.id} {user.first_name} {user.last_name} {user.email}
+        </p>
       ))}
     </div>
   );
